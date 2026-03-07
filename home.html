@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home,B13-A5</title>
+
+    <!-- link fav -->
+    <link
+      rel="shortcut icon"
+      href="assets/github-logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- tailwind and daisy link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- google font html-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- google font css -->
+    <style>
+      body {
+        font-family: "Geist", sans-serif;
+      }
+    </style>
+  </head>
+  <body class=>
+
+    <header class="border-b-2 bg-gray-100 ">
+      <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
+        <div class="left flex items-center gap-3">
+          <div class="w-[60px] ">
+            <img src="./assets/github-logo.png" alt="" />
+            
+          </div>
+          <div>
+            <h2 class="font-bold text-3xl">GitHub Issues Tracker</h2>
+          </div>
+        </div>
+
+        <div class="right">
+
+          <div class="join gap-2">
+            <div>
+              <label class="input validator join-item">
+                <svg
+                  class="h-[1em] opacity-50"
+                  
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path <i class="fa-solid fa-magnifying-glass"></i></path>
+                  </g>
+                </svg>
+                <input type="search" placeholder="Search issues..." required />
+              </label>
+              
+            </div>
+            <button class="btn btn-primary join-item "> <i class="fa-solid fa-plus"></i>New Issue</button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="w-[60%] mx-auto flex gap-3 pt-10">
+        <div id="all-btn" class="py-3 px-6 bg-[#4A00FF] text-white rounded-xl">All</div>
+        <div id="open-btn" class="py-3 px-6 bg-gray-100 rounded-xl">Open</div>
+        <div id="cld-btn" class="py-3 px-6 bg-gray-100 rounded-xl">Closed</div>
+
+        
+    </main>
+
+    
+  </body>
+</html>
