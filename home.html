@@ -64,18 +64,8 @@
           <div class="join gap-2">
             <div>
               <label class="input validator join-item">
-                <svg class="h-[1em] opacity-50" viewBox="0 0 24 24">
-                  <g
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
-                    stroke-width="2.5"
-                    fill="none"
-                    stroke="currentColor"
-                  >
-                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                    <path><i class="fa-solid fa-magnifying-glass"></i></path>
-                  </g>
-                </svg>
+                <path><i class="fa-solid fa-magnifying-glass"></i></path>
+
                 <input type="search" placeholder="Search issues..." required />
               </label>
             </div>
@@ -88,17 +78,16 @@
     </header>
 
     <!-- button section  -->
-    <main class="w-[60%] mx-auto flex gap-3 pt-10 border-2">
+    <main class="w-[60%] mx-auto flex gap-3 pt-10">
       <div id="all-btn" class="py-3 px-6 bg-[#4A00FF] text-white rounded-xl">
         All
       </div>
       <div id="open-btn" class="py-3 px-6 bg-gray-100 rounded-xl">Open</div>
       <div id="cld-btn" class="py-3 px-6 bg-gray-100 rounded-xl">Closed</div>
     </main>
+
     <!-- all issus section  -->
-    <section
-      class="w-[60%] mx-auto flex justify-between items-center pt-20 border-2"
-    >
+    <section class="w-[60%] mx-auto flex justify-between items-center pt-20">
       <div class="flex gap-3">
         <div>
           <img src="./assets/Aperture.png" alt="" />
@@ -110,41 +99,49 @@
       </div>
 
       <div class="flex gap-5">
-        <div>Open</div>
-        <div>Closed</div>
+        <div class="flex">
+          <img src="./assets/Open-Status.png" alt="" />
+          <p>Open</p>
+        </div>
+        <div class="flex">
+          <img src="./assets/Closed- Status .png" alt="" />
+          <p>Closed</p>
+        </div>
       </div>
     </section>
 
+    <!-- dynamic add  -->
     <section
-      class="border-2 w-[60%] mx-auto grid grid-cols-1 sm:grid-cols-4 gap-3"
-    >
-    
-            <!-- all container  -->
-        <div id="card-container">
+      class="w-[60%] mx-auto grid grid-cols-4 gap-3 pt-10"
+      id="card-container"
+    ></section>
 
-          <!-- dynamic add  -->
-          <!-- <div class="card-body rounded-2xl border-2 " >
-          <div class="flex justify-end">
-            <div class="badge badge-outline badge-secondary">Secondary</div>
-          </div>
-          <h2 class="card-title font-semibold text-xl line-clamp-2">Card Title</h2>
-          <p class="line-clamp-2">
-            A card component has a figure, a body part, and inside body there
-            are title and actions parts
-          </p>
-          
-          <div class="card-actions justify-between">
-           <div class="badge badge-outline badge-error font-medium text-xl">Error</div>
-          <div class="badge badge-outline badge-warning font-medium text-xl">Warning</div>
-          </div>
-           <div>
-            <p>name</p>
-            <p>date</p>
-           </div>
-        </div> -->
-     
-        </div>
+    <!-- spier section  -->
+    <section
+      class="hidden flex justify-center items-center"
+      id="loading-spinner"
+    >
+      <span class="loading loading-spinner loading-xl"></span>
     </section>
+
+    <!-- modal section  -->
+    <section>
+      <!-- Open the modal using ID.showModal() method -->
+      <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </section>
+
     <script src="./login/script.js"></script>
   </body>
 </html>
