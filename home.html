@@ -47,14 +47,13 @@
       }
     </style>
   </head>
-  <body class=>
-
-    <header class="border-b-2 bg-gray-100 ">
+  <body class="">
+    <!-- navbar -->
+    <header class="border-b-2 bg-gray-100">
       <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
         <div class="left flex items-center gap-3">
-          <div class="w-[60px] ">
+          <div class="w-[60px]">
             <img src="./assets/github-logo.png" alt="" />
-            
           </div>
           <div>
             <h2 class="font-bold text-3xl">GitHub Issues Tracker</h2>
@@ -62,15 +61,10 @@
         </div>
 
         <div class="right">
-
           <div class="join gap-2">
             <div>
               <label class="input validator join-item">
-                <svg
-                  class="h-[1em] opacity-50"
-                  
-                  viewBox="0 0 24 24"
-                >
+                <svg class="h-[1em] opacity-50" viewBox="0 0 24 24">
                   <g
                     stroke-linejoin="round"
                     stroke-linecap="round"
@@ -79,27 +73,78 @@
                     stroke="currentColor"
                   >
                     <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                    <path <i class="fa-solid fa-magnifying-glass"></i></path>
+                    <path><i class="fa-solid fa-magnifying-glass"></i></path>
                   </g>
                 </svg>
                 <input type="search" placeholder="Search issues..." required />
               </label>
-              
             </div>
-            <button class="btn btn-primary join-item "> <i class="fa-solid fa-plus"></i>New Issue</button>
+            <button class="btn btn-primary join-item">
+              <i class="fa-solid fa-plus"></i>New Issue
+            </button>
           </div>
         </div>
       </section>
     </header>
 
-    <main class="w-[60%] mx-auto flex gap-3 pt-10">
-        <div id="all-btn" class="py-3 px-6 bg-[#4A00FF] text-white rounded-xl">All</div>
-        <div id="open-btn" class="py-3 px-6 bg-gray-100 rounded-xl">Open</div>
-        <div id="cld-btn" class="py-3 px-6 bg-gray-100 rounded-xl">Closed</div>
-
-        
+    <!-- button section  -->
+    <main class="w-[60%] mx-auto flex gap-3 pt-10 border-2">
+      <div id="all-btn" class="py-3 px-6 bg-[#4A00FF] text-white rounded-xl">
+        All
+      </div>
+      <div id="open-btn" class="py-3 px-6 bg-gray-100 rounded-xl">Open</div>
+      <div id="cld-btn" class="py-3 px-6 bg-gray-100 rounded-xl">Closed</div>
     </main>
+    <!-- all issus section  -->
+    <section
+      class="w-[60%] mx-auto flex justify-between items-center pt-20 border-2"
+    >
+      <div class="flex gap-3">
+        <div>
+          <img src="./assets/Aperture.png" alt="" />
+        </div>
+        <div>
+          <h4 class="font-semibold text-xl">50 Issues</h4>
+          <p>Track and manage your project issues</p>
+        </div>
+      </div>
 
+      <div class="flex gap-5">
+        <div>Open</div>
+        <div>Closed</div>
+      </div>
+    </section>
+
+    <section
+      class="border-2 w-[60%] mx-auto grid grid-cols-1 sm:grid-cols-4 gap-3"
+    >
     
+            <!-- all container  -->
+        <div id="card-container">
+
+          <!-- dynamic add  -->
+          <!-- <div class="card-body rounded-2xl border-2 " >
+          <div class="flex justify-end">
+            <div class="badge badge-outline badge-secondary">Secondary</div>
+          </div>
+          <h2 class="card-title font-semibold text-xl line-clamp-2">Card Title</h2>
+          <p class="line-clamp-2">
+            A card component has a figure, a body part, and inside body there
+            are title and actions parts
+          </p>
+          
+          <div class="card-actions justify-between">
+           <div class="badge badge-outline badge-error font-medium text-xl">Error</div>
+          <div class="badge badge-outline badge-warning font-medium text-xl">Warning</div>
+          </div>
+           <div>
+            <p>name</p>
+            <p>date</p>
+           </div>
+        </div> -->
+     
+        </div>
+    </section>
+    <script src="./login/script.js"></script>
   </body>
 </html>
