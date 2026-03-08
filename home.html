@@ -66,10 +66,10 @@
               <label class="input validator join-item">
                 <path><i class="fa-solid fa-magnifying-glass"></i></path>
 
-                <input type="search" placeholder="Search issues..." required />
+                <input id="input-search" type="search" placeholder="Search issues..." required />
               </label>
             </div>
-            <button class="btn btn-primary join-item">
+            <button id="input-btn" class="btn btn-primary join-item">
               <i class="fa-solid fa-plus"></i>New Issue
             </button>
           </div>
@@ -78,7 +78,7 @@
     </header>
 
     <!-- button section  -->
-    <main class="w-[60%] mx-auto flex gap-3 pt-10">
+    <main class="w-[60%] mx-auto flex gap-3 pt-10" id="btn-container">
       <div id="all-btn" class="py-3 px-6 bg-[#4A00FF] text-white rounded-xl">
         All
       </div>
@@ -93,7 +93,7 @@
           <img src="./assets/Aperture.png" alt="" />
         </div>
         <div>
-          <h4 class="font-semibold text-xl">50 Issues</h4>
+          <h4 class="font-semibold text-xl" id="issues-btn">0 Issues</h4>
           <p>Track and manage your project issues</p>
         </div>
       </div>
@@ -118,7 +118,7 @@
 
     <!-- spier section  -->
     <section
-      class="hidden flex justify-center items-center"
+      class="hidden  justify-center items-center"
       id="loading-spinner"
     >
       <span class="loading loading-spinner loading-xl"></span>
@@ -133,7 +133,8 @@
         <!--  modal add -->
       </dialog>
     </section>
-
+     <script src="./login/btn.js"></script>
     <script src="./login/script.js"></script>
+    
   </body>
 </html>

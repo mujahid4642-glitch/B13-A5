@@ -4,16 +4,21 @@ const cardContainer = document.getElementById("card-container");
 const loadingSpinner = document.getElementById("loading-spinner");
 const modalContainer = document.getElementById("modal-container");
 
+
+
 // spiner function
 
 function showloading() {
   loadingSpinner.classList.remove("hidden");
+  loadingSpinner.classList.add("flex");
   cardContainer.innerHTML = "";
 }
 function hiddenLoading() {
   loadingSpinner.classList.add("hidden");
+  loadingSpinner.classList.remove("flex");
 }
 
+  //  card section 
 async function loadData() {
   showloading();
   const res = await fetch(
@@ -28,7 +33,9 @@ function displayCard(cards) {
   console.log(cards);
   cards.forEach((card) => {
     console.log(card);
+
     const allcard = document.createElement("div");
+    
     allcard.className = "card-body rounded-2xl gap-3  ";
     allcard.innerHTML = `
       <div class=" " onclick="loadwords(${card.id})" >
@@ -85,7 +92,7 @@ const displayWord = (modal) => {
             <p>${new Date(modal.createdAt).toLocaleDateString()}</p>
           </div>
           <div class="flex gap-2">
-           ${modal.labels.map(label => `<p class="bg-[#FDE68A] px-2 rounded">${label}</p>`).join('')}
+           ${modal.labels.map((label) => `<p class="bg-[#FDE68A] px-2 rounded">${label}</p>`).join("")}
           </div>
           <p>
             ${modal.description}
@@ -93,11 +100,11 @@ const displayWord = (modal) => {
           <div class="flex justify-between">
             <div>
               <p>Assignee:</p>
-              <p class="font-bold">${modal.assignee || 'Not Assigned'}</p>
+              <p class="font-bold">${modal.assignee || "Not Assigned"}</p>
             </div>
             <div>
               <p>Priority:</p>
-              <p class="bg-[#EF4444]">${modal.priority}</p>
+              <p class="bg-[#EF4444]">${modal.priority}f</p>
             </div>
           </div>
           <div class="modal-action">
@@ -112,5 +119,55 @@ const displayWord = (modal) => {
   `;
   document.getElementById("my_modal_5").showModal();
 };
+  
 
 loadData();
+
+
+// document.getElementById("input-btn").addEventListener("click",()=>{
+//   const input = document.getElementById("input-search")
+//   const searchValue= input.value.trim().toLowerCase()
+//   console.log(searchValue);
+
+//   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q")
+//   .then(res=>res.json())
+//   .then((date)=>{
+//     const allData = date.data
+//     console.log(allData);
+//     const filterDate = allData.filter(word=>word.word.toLowerCase().includes(searchValue))
+//     console.log(filterDate);
+//   })
+// })
+
+
+const searchInput = document.getElementById('input-search');
+const searchBtn = document.getElementById('input-btn'); // যদিও এটি New Issue বাটন, আমি সার্চের লজিক দিচ্ছি
+
+// সার্চ ফাংশন
+async function searchIssues() {
+    const searchText = searchInput.value.trim();
+    
+    if (searchText === "") {
+        alert("Please enter something to search!");
+        return;
+    }
+
+    try {
+        const response = await fetch(`https://vercel.app{searchText}`);
+        const data = await response.json();
+        
+        console.log(data); // এখানে কনসোলে ডেটা দেখতে পাবেন
+        // এখানে আপনার UI আপডেট করার ফাংশন কল করুন
+        // displayData(data); 
+        
+    } catch (error) {
+        console.error("Fetching error:", error);
+    }
+}
+
+// ইনপুট ফিল্ডে এন্টার চাপলে সার্চ হবে
+searchInput.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        searchIssues();
+    }
+});
