@@ -1,129 +1,34 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
-
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
-
----
-
-# Assignment-05: GitHub Issues Tracker
+1️⃣ What is the difference between var, let, and const?   
 
 
-### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
+1 ans. var, let, and const in JavaScript differ mainly in scope and reassignability. var is function-scoped (or global), hoisted, and re-declarable. let and const are block-scoped (scoped to {}), with let allowing reassignment and const prohibiting it. const requires initialization, while let and var do not. 
 
 
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
-
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
+2️⃣ What is the spread operator (...)?
 
 
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
 
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
-
-
----
-
-## 📝 Main Requirements
-
-## 🎨 Design Part
-
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
-
-## Main Page: 
-
-### Navbar: 
-
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
+2.The spread operator (...) in JavaScript is a syntax that expands an iterable (like an array, string, or object) into individual elements or properties. It is used to create shallow copies, merge arrays/objects, or pass arguments to functions without mutating the original data. 
 
 
---- 
+
+3️⃣ What is the difference between map(), filter(), and forEach()?
 
 
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
 
-- Load all issues and display as per Figma
-
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
-
-- Each card shows:
-  - Title
-  - Description
-  - Status
-  - Category
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on a tree name in a card will open a modal and show all the information about that Issue. 
-
-### 🚀 Challenges
+3.The main difference among map(), filter(), and forEach() in JavaScript is their purpose and return value. forEach() is for performing an action (side effect) on each item and returns undefined. Both map() and filter() return a new array: map() transforms each element, while filter() selects a subset of elements based on a condition.
 
 
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
 
-- Loading spinner on data load
-
-- Show active button on changing category names
-
-- Implement Search Functionality and 8 meaningful github commit.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-    - 1️⃣ What is the difference between var, let, and const?
-    - 2️⃣ What is the spread operator (...)?
-    - 3️⃣ What is the difference between map(), filter(), and forEach()?
-    - 4️⃣ What is an arrow function?
-    - 5️⃣ What are template literals?
+4️⃣ What is an arrow function?
 
 
----
 
-## 🛠️ Technology Stack
-
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
-
----
-
-## 🔑 Demo Credentials
-
-```text
-Username: admin
-Password: admin123
-```
+An arrow function, introduced in ES6, is a concise, anonymous syntax for writing function expressions in JavaScript using the => ("fat arrow") operator. They offer a shorter alternative to traditional functions, omit the function keyword, and automatically bind the this value from the surrounding context
 
 
----
 
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
+5️⃣ What are template literals?
 
 
-## 📤 What to submit
-
-- **GitHub Repository Link:**
-- **Live Site Link:**
-
----
-
-
+Template literals, introduced in ES6, are string literals in JavaScript that use backticks (`) instead of single or double quotes. They enable multi-line strings, string interpolation via ${expression} syntax, and enhanced readability for dynamic string creation.
