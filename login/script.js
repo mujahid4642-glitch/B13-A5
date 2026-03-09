@@ -4,6 +4,33 @@ const cardContainer = document.getElementById("card-container");
 const loadingSpinner = document.getElementById("loading-spinner");
 const modalContainer = document.getElementById("modal-container");
 
+const allBtn = document.getElementById("all-btn")
+const openBtn = document.getElementById("open-btn")
+const clsBtn = document.getElementById("cls-btn")
+
+
+const maincontainer = document.querySelector("main")
+
+
+    //  btn toggle 
+
+    function togglestyle(id){
+      allBtn.classList.remove('bg-[#4A00FF]' , 'text-white'  )
+      openBtn.classList.remove('bg-[#4A00FF]' , 'text-white'  )
+      clsBtn.classList.remove('bg-[#4A00FF]' , 'text-white'  )
+
+
+      allBtn.classList.add('bg-gray-200' , 'text-black'  )
+      openBtn.classList.add('bg-gray-200' , 'text-black'  )
+      clsBtn.classList.add('bg-gray-200' , 'text-black'  )
+
+      const btnSeleted = document.getElementById(id)
+      console.log(btnSeleted);
+
+      btnSeleted.classList.remove('bg-gray-200' , 'text-black')
+      btnSeleted.classList.add('bg-[#4A00FF]' , 'text-white')
+    }
+ 
 
 
 // spiner function
@@ -123,51 +150,3 @@ const displayWord = (modal) => {
 
 loadData();
 
-
-// document.getElementById("input-btn").addEventListener("click",()=>{
-//   const input = document.getElementById("input-search")
-//   const searchValue= input.value.trim().toLowerCase()
-//   console.log(searchValue);
-
-//   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q")
-//   .then(res=>res.json())
-//   .then((date)=>{
-//     const allData = date.data
-//     console.log(allData);
-//     const filterDate = allData.filter(word=>word.word.toLowerCase().includes(searchValue))
-//     console.log(filterDate);
-//   })
-// })
-
-
-const searchInput = document.getElementById('input-search');
-const searchBtn = document.getElementById('input-btn'); // যদিও এটি New Issue বাটন, আমি সার্চের লজিক দিচ্ছি
-
-// সার্চ ফাংশন
-async function searchIssues() {
-    const searchText = searchInput.value.trim();
-    
-    if (searchText === "") {
-        alert("Please enter something to search!");
-        return;
-    }
-
-    try {
-        const response = await fetch(`https://vercel.app{searchText}`);
-        const data = await response.json();
-        
-        console.log(data); // এখানে কনসোলে ডেটা দেখতে পাবেন
-        // এখানে আপনার UI আপডেট করার ফাংশন কল করুন
-        // displayData(data); 
-        
-    } catch (error) {
-        console.error("Fetching error:", error);
-    }
-}
-
-// ইনপুট ফিল্ডে এন্টার চাপলে সার্চ হবে
-searchInput.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        searchIssues();
-    }
-});

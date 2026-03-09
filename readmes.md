@@ -25,3 +25,10 @@
 
 
 An arrow function, introduced in ES6, is a concise, anonymous syntax for writing function expressions in JavaScript using the => ("fat arrow") operator. They offer a shorter alternative to traditional functions, omit the function keyword, and automatically bind the this value from the surrounding context
+
+
+
+5️⃣ What are template literals?
+
+
+Template literals, introduced in ES6, are string literals in JavaScript that use backticks (`) instead of single or double quotes. They enable multi-line strings, string interpolation via ${expression} syntax, and enhanced readability for dynamic string creation.
