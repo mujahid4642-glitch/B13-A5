@@ -13,7 +13,7 @@ document.getElementById("login-btn").addEventListener("click",()=>{
         if (username === "admin" && password === "admin123") {
         // 4.true>>>alert> home page
         alert("entry");
-        window.location.assign("/home.html")
+       window.location.assign("home.html");
     } else {
         // 5.false>>alert>return
         alert("no entry");
